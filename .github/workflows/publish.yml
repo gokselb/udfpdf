@@ -13,7 +13,6 @@ jobs:
       issues: write
       pull-requests: write
       id-token: write
-      packages: write
 
     steps:
       - uses: actions/checkout@v4
@@ -45,24 +44,3 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
-      - name: Publish to GitHub Packages
-        # Only when semantic-release actually tagged a new release at HEAD
-        if: success()
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@gokselb'
-
-      - name: Push to GitHub Packages registry
-        if: success()
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          if git describe --exact-match HEAD 2>/dev/null; then
-            # Rename to scoped package for GitHub Packages (runner only, not committed)
-            npm pkg set name="@gokselb/udfpdf"
-            npm publish --access public
-          else
-            echo "No new release — skipping GitHub Packages publish"
-          fi
