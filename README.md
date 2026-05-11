@@ -10,8 +10,6 @@ UYAP (Ulusal Yargı Ağı Bilişim Sistemi) is Turkey's national judicial networ
 npm install -g udfpdf
 ```
 
-> **Note:** PDF conversion requires Puppeteer (~170MB Chromium download on first install). If you only need DOCX/HTML/TXT/MD, you can skip the Chromium download by setting `PUPPETEER_SKIP_DOWNLOAD=true` before installing.
-
 ## Usage
 
 ```bash
@@ -72,7 +70,6 @@ A `.udf` file is a ZIP archive containing:
 ## Requirements
 
 - Node.js 18+
-- For PDF output: Puppeteer (auto-installed, downloads Chromium)
 
 ## License
 
