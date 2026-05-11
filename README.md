@@ -1,9 +1,9 @@
 # udfpdf
 
 [![CI](https://github.com/gokselb/udfpdf/actions/workflows/ci.yml/badge.svg)](https://github.com/gokselb/udfpdf/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/@gokselb/udfpdf)](https://www.npmjs.com/package/@gokselb/udfpdf)
+[![npm](https://img.shields.io/npm/v/udfpdf)](https://www.npmjs.com/package/udfpdf)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![npm provenance](https://img.shields.io/badge/npm-provenance-green)](https://www.npmjs.com/package/@gokselb/udfpdf)
+[![npm provenance](https://img.shields.io/badge/npm-provenance-green)](https://www.npmjs.com/package/udfpdf)
 
 Convert UYAP UDF documents to PDF, DOCX, HTML, Markdown, or plain text.
 
@@ -12,7 +12,7 @@ UYAP (Ulusal Yargı Ağı Bilişim Sistemi) is Turkey's national judicial networ
 ## Install
 
 ```bash
-npm install -g @gokselb/udfpdf
+npm install -g udfpdf
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ udfpdf evrak.udf -v
 ## Programmatic API
 
 ```typescript
-import { parseUdf, convertUdf } from '@gokselb/udfpdf'
+import { parseUdf, convertUdf } from 'udfpdf'
 
 // Parse to document model
 const model = await parseUdf('./evrak.udf')

@@ -13,7 +13,6 @@ jobs:
       issues: write
       pull-requests: write
       id-token: write
-      packages: write
 
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +23,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          registry-url: 'https://registry.npmjs.org'
           cache: 'npm'
 
       - name: Install dependencies
@@ -39,21 +37,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Publish to npmjs.com
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-
-      - name: Publish to GitHub Packages
-        # Only run if semantic-release created a new tag at HEAD
-        if: success()
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          if git describe --exact-match HEAD 2>/dev/null; then
-            npm config set @gokselb:registry https://npm.pkg.github.com
-            npm publish
-          else
-            echo "No new release — skipping GitHub Packages publish"
-          fi
