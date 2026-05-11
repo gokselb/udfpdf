@@ -79,4 +79,4 @@ Use this tool only with documents you are authorised to access.
 
 ## License
 
-MIT © [Burak Goksel](https://github.com/gokselb)
+Apache 2.0 © [Burak Goksel](https://github.com/gokselb)
