@@ -6,6 +6,7 @@ import { renderText } from '../src/renderers/text.js'
 import { renderHTML } from '../src/renderers/html.js'
 import { renderMarkdown } from '../src/renderers/markdown.js'
 import { renderDOCX } from '../src/renderers/docx.js'
+import { renderPDF } from '../src/renderers/pdf.js'
 
 const FIXTURE = resolve(import.meta.dirname, 'fixtures/evrak_13971521883.udf')
 const HAS_FIXTURE = existsSync(FIXTURE)
@@ -69,6 +70,15 @@ describe.skipIf(!HAS_FIXTURE)('integration: real UDF file', () => {
     // ZIP magic bytes (DOCX is a ZIP)
     expect(buf[0]).toBe(0x50)
     expect(buf[1]).toBe(0x4b)
+  })
+
+  it('renders to PDF buffer with correct magic bytes', async () => {
+    const model = await parseUdf(FIXTURE)
+    const buf = await renderPDF(model)
+    expect(buf).toBeInstanceOf(Buffer)
+    expect(buf.length).toBeGreaterThan(10000)
+    // PDF magic bytes: %PDF
+    expect(buf.slice(0, 4).toString()).toBe('%PDF')
   })
 
   it('body contains paragraphs and/or tables', async () => {
