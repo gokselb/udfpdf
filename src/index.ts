@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 export { extractUdf } from './parser/unzip.js'
 export { parseContentXml, parsePropertiesXml } from './parser/xml-parser.js'
 export { buildDocumentModel } from './parser/document-model.js'

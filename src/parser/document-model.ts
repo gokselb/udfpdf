@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import type {
   DocumentModel, PageFormat, Paragraph, TextRun, Table, TableRow, TableCell, Block, StyleDef,
 } from './types.js'

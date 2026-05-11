@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check license headers
+        run: npm run check:license
+
       - name: Typecheck
         run: npm run typecheck
 

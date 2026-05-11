@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 // Converts signed 32-bit ARGB integer (Java/UYAP color format) to CSS hex string.
 // e.g. -16777216 → "#000000", -1 → "#ffffff", -8355712 → "#808080"
 export function argbToCSS(value: number | string | undefined): string | undefined {

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { createRequire } from 'module'
 import { join, dirname } from 'path'
 import type { DocumentModel, Paragraph, TextRun, Block, Table, TableCell } from '../parser/types.js'

@@ -45,7 +45,8 @@
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:license": "node scripts/check-license.mjs"
   },
   "dependencies": {
     "commander": "^12.1.0",

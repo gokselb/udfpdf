@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import {
   Document, Packer, Paragraph as DocxParagraph, TextRun as DocxTextRun,
   AlignmentType, Table as DocxTable, TableRow as DocxTableRow, TableCell as DocxTableCell,

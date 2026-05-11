@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import JSZip from 'jszip'
 import { readFile } from 'fs/promises'
 import type { RawUdfFiles } from './types.js'

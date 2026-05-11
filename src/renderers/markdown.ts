@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import type { DocumentModel, Paragraph, TextRun, Block, Table } from '../parser/types.js'
 
 function renderRun(run: TextRun): string {

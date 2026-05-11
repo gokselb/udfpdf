@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import type { DocumentModel } from '../parser/types.js'
 
 export function renderText(model: DocumentModel): string {

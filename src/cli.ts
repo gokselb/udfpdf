@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 import { Command } from 'commander'
 import { readFileSync } from 'fs'
 import { resolve, basename, extname, join, dirname } from 'path'
