@@ -12,10 +12,18 @@
     "legal"
   ],
   "license": "MIT",
-  "author": "Burak Goksel",
+  "author": {
+    "name": "Burak Goksel",
+    "email": "bgokselburak@gmail.com",
+    "url": "https://github.com/gokselb"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gokselb/udfpdf"
+  },
+  "homepage": "https://github.com/gokselb/udfpdf#readme",
+  "bugs": {
+    "url": "https://github.com/gokselb/udfpdf/issues"
   },
   "type": "module",
   "main": "./dist/index.js",

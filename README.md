@@ -71,6 +71,12 @@ A `.udf` file is a ZIP archive containing:
 
 - Node.js 18+
 
+## Legal
+
+The UYAP UDF format is a proprietary format produced by Turkey's Ministry of Justice. This tool reverse-engineers the format solely to read documents that users legitimately own — it does not bypass authentication, circumvent DRM, or access any government systems.
+
+Use this tool only with documents you are authorised to access.
+
 ## License
 
-MIT
+MIT © [Burak Goksel](https://github.com/gokselb)
