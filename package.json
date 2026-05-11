@@ -1,5 +1,5 @@
 {
-  "name": "udfpdf",
+  "name": "@gokselb/udfpdf",
   "version": "0.1.0",
   "description": "Convert UYAP UDF documents to PDF, DOCX, HTML, Markdown, or plain text",
   "keywords": [

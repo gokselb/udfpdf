@@ -4,6 +4,7 @@
 
 ```bash
 git clone https://github.com/gokselb/udfpdf
+# install: npm install -g @gokselb/udfpdf
 cd udfpdf
 npm install
 ```
