@@ -49,12 +49,12 @@
     "check:license": "node scripts/check-license.mjs"
   },
   "dependencies": {
-    "commander": "^12.1.0",
-    "docx": "^8.5.0",
+    "commander": "^14.0.3",
+    "docx": "^9.6.1",
     "fast-glob": "^3.3.2",
-    "fast-xml-parser": "^4.4.1",
+    "fast-xml-parser": "^5.8.0",
     "jszip": "^3.10.1",
-    "ora": "^8.1.1",
+    "ora": "^9.4.0",
     "pdfmake": "^0.3.8"
   },
   "devDependencies": {
